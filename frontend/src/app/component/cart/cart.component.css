@@ -1,0 +1,44 @@
+.bag-header > p {
+  margin-top: 20px;
+  font-size: 35px;
+  font-family: 'Lora', serif;
+}
+.bag-header > span {
+  font-size: 13px;
+  font-family: 'Lora', serif;
+}
+
+/* Table header */
+.table-header p {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+/* Table content */
+.table-content p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+/* Table Footer */
+.table-footer h3 {
+  font-variant: small-caps;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.table-footer p {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Lora', serif;
+  margin-bottom: 0;
+}
+.table-footer span.snippet {
+  font-size: 13px;
+  color: gray;
+
+}
+/* Fa times icon thin */
+.fa-times-thin:before {
+	content: '\00d7';
+}

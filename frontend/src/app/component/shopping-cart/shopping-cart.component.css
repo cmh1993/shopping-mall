@@ -1,0 +1,40 @@
+/* Cart */
+.cart-header > h6 {
+  margin-top: 10px;
+  font-family: 'Lora', serif;
+}
+.cart-footer > a {
+  color: white;
+}
+.cart-footer > a:hover {
+  text-decoration: none;
+}
+.cart-footer > p {
+  font-size: 13px;
+  color: grey;
+}
+.cart-footer > p > span {
+  font-size: 18px;
+  color: black;
+  letter-spacing: 0.5px;
+}
+.cart-footer > a > p {
+  color: white;
+  font-variant: all-small-caps;
+  font-size: 15px;
+  font-weight: 200;
+  padding: 10px 0;
+}
+/* Item card */
+.item-snippet > h6 {
+  font-size: 13px;
+  font-variant: all-small-caps;
+}
+.item-snippet > p {
+  font-size: 12px;
+  margin: 0;
+}
+/* Fa icon times thinner */
+.fa-times-thin:before {
+	content: '\00d7';
+}

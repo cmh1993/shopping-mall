@@ -1,0 +1,326 @@
+<nav class="navbar fixed-top text-center" style="padding: 0; height: 110px;">
+  <div class="container-fluid" style="margin: 0; padding: 0; height: 100%;">
+    <div class="row" style="height: 10px; background: black;"></div>
+
+    <div class="row align-items-center" style="height: 100%; border-bottom: 1px solid lightgray; background: white;">
+      <div class="col-md-4" style="padding-left: 3%;">
+        <div class="container-fluid">
+          <div class="row" style="margin-bottom: 3%;">
+            <div class="col-md-12">
+              <h6 class="pull-left" style="margin-top: 20px; font-variant: all-small-caps;">korea</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="left-banner col-md-12">
+              <h6 class="pull-left" style="margin-bottom: 0; color: rgb(189, 17, 17); font-variant: all-small-caps;">free shipping</h6><br/>
+              <p class="pull-left">On order of $150 more with code FREESHIP. <span>See details</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <a routerLink="home"><img src="../assets/logo.gif" height="29px;" /></a>
+      </div>
+      <div class="col-md-4" style="padding-right: 3%;">
+        <div class="container-fluid">
+          <div class="row" style="margin-bottom: 3%;">
+            <div class="col-md-12 pull-right">
+
+
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-5" style="padding: 0;">
+                    <div class="dropdown">
+                      <div class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-shopping-cart" style="margin-right: 10px;"></i><span class="right-banner">Your bag ({{cartItems.length}})</span>
+                      </div>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu" style="width: 400px;">
+                        <cart-app> </cart-app>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4" style="padding: 0;">
+                    <!-- Sign in -->
+                    <div class="dropdown">
+                      <div *ngIf="authService.isLoggedIn()" class="dropdown-toggle" id="dropdownMenu_login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="right-banner">Sign In</span>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu_login" style="width: 400px;">
+                          <login-app> </login-app>
+                        </div>
+                      </div>
+                      <div *ngIf="!authService.isLoggedIn()" class="dropdown-toggle" id="dropdownMenu_account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="right-banner">My Account</span>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu_account" style="width: 300px;">
+                          <account-app></account-app>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs justify-content-center" role="tablist" style="background: white;">
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" data-toggle="tab" href="#new" role="tab">new arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" data-toggle="tab" href="#women" role="tab">women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" data-toggle="tab" href="#men" role="tab">men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sales" role="tab" style="color: crimson">sale</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content well" style="box-shadow: 5px 5px 10px rgba(0,0,0,.10); background: white; opacity: 0.95;">
+
+          <!-- New Arrivals -->
+          <div class="tab-pane fade" id="new">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">The Latest For Women</h6>
+                    <a href="#"><p>New Arrivals</p></a>
+                    <a href="#"><p>Best Sellers</p></a>
+                    <a href="#"><p>Our Picks</p></a>
+                    <a href="#"><p>The Weekend Shop</p></a>
+                    <a href="#"><p>The Essential Shop</p></a>
+                    <a href="#"><p>The Office Shop</p></a>
+                    <a href="#"><p>The Cashmere Shop</p></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">The Latest For Men</h6>
+                    <a href="#"><p>New Arrivals</p></a>
+                    <a href="#"><p>Base Sellers</p></a>
+                    <a href="#"><p>Our Picks</p></a>
+                    <a href="#"><p>The Fit Guide</p></a>
+                    <a href="#"><p>The Weekend Shop</p></a>
+                    <a href="#"><p>The Essential Shop</p></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <img src="../assets/1114484.jpg" width="100%">
+                    <h6 class="dropdown-header">Women's New Arrivals</h6>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <img src="../assets/1114486.jpg" width="100%">
+                    <h6 class="dropdown-header">Men's New Arrivals</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Women -->
+          <div class="tab-pane fade" id="women" role="tabpanel">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Clothing</h6>
+                    <a href="#"><p>Dresses</p></a>
+                    <a href="#"><p>Jumpsuits and Rompers</p></a>
+                    <a href="#"><p>Shirt</p></a>
+                    <a href="#"><p>Sweaters</p></a>
+                    <a href="#"><p>Coats and Tranch Coats</p></a>
+                    <a href="#"><p>Jackets and Vests</p></a>
+                    <a href="#"><p>Knits and Tees</p></a>
+                    <a href="#"><p>Pants</p></a>
+                    <a href="#"><p>Jeans</p></a>
+                    <a href="#"><p>Skirts</p></a>
+                    <a href="#"><p>Shorts</p></a>
+                    <a href="#"><p>Swim</p></a>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Accessories</h6>
+                    <a href="#"><p>Shoes</p></a>
+                    <a href="#"><p>Jewelry</p></a>
+                    <a href="#"><p>Fine Jewelry</p></a>
+                    <a href="#"><p>Scarves and Wraps</p></a>
+                    <a href="#"><p>Hats and Hair Accessories</p></a>
+                    <a href="#"><p>Sunglasses</p></a>
+                    <a href="#"><p>Handbags</p></a>
+                    <a href="#"><p>Belts</p></a>
+                    <a href="#"><p>Home and Beauty</p></a>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Shops</h6>
+                    <a href="#"><p>New Arrivals</p></a>
+                    <a href="#"><p>Best Sellers</p></a>
+                    <a href="#"><p>Our Picks</p></a>
+                    <a href="#"><p>The Weekend Shop</p></a>
+                    <a href="#"><p>The Essentials Shop</p></a>
+                    <a href="#"><p>The Office Shop</p></a>
+                    <a href="#"><p>The Cashmere Shop</p></a>
+                    <a href="#"><p>The Shoe Shop</p></a>
+                    <a href="#"><p>The Occasion Shop</p></a>
+                    <a href="#"><p>Brands We Love</p></a>
+                  </div>
+                </div>
+
+                <div clsas="col-md-3">
+                  <div class="dropdown_">
+                    <img src="../assets/1114554.jpg" width="100%">
+                    <h6 class="dropdown-header" style="color: black">See For Yourself</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Men -->
+          <div class="tab-pane fade" id="men" role="tabpanel">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Clothing</h6>
+                    <a href="#"><p>Casual Shirts</p></a>
+                    <a href="#"><p>Outerwear</p></a>
+                    <a href="/men/clothing/sweaters"><p>Sweaters</p></a>
+                    <a href="#"><p>Activewear</p></a>
+                    <a href="#"><p>Pants</p></a>
+                    <a href="#"><p>Jeans</p></a>
+                    <a href="#"><p>Suits</p></a>
+                    <a href="#"><p>Blazers</p></a>
+                    <a href="#"><p>Dress Shirts</p></a>
+                    <a href="#"><p>Tees and Polo Shirts</p></a>
+                    <a href="#"><p>Shorts</p></a>
+                    <a href="#"><p>Swim</p></a>
+                    <a href="#"><p>Sleepwear</p></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Accessories</h6>
+                    <a href="#"><p>Shoes</p></a>
+                    <a href="#"><p>Bags</p></a>
+                    <a href="#"><p>Grooming</p></a>
+                    <a href="#"><p>Sunglasses</p></a>
+                    <a href="#"><p>Belts</p></a>
+                    <a href="#"><p>Socks</p></a>
+                    <a href="#"><p>Jewelry</p></a>
+                    <a href="#"><p>Hats</p></a>
+                    <a href="#"><p>Small Accessories</p></a>
+                    <a href="#"><p>Tech Accessories</p></a>
+                    <a href="#"><p>Ties and Pocket Squares</p></a>
+                    <a href="#"><p>Scarves</p></a>
+                    <a href="#"><p>Gloves</p></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Shops</h6>
+                    <a href="#"><p>New Arrivals</p></a>
+                    <a href="#"><p>The Fit Guide</p></a>
+                    <a href="#"><p>Best Sellers</p></a>
+                    <a href="#"><p>Our Picks</p></a>
+                    <a href="#"><p>The Essentials Shop</p></a>
+                    <a href="#"><p>The Weekend Shop</p></a>
+                    <a href="#"><p>The Suit Shop</p></a>
+                    <a href="#"><p>Brands We Love</p></a>
+                  </div>
+                </div>
+                <div clsas="col-md-3">
+                  <div class="dropdown_">
+                    <img src="../assets/1114514.jpg" width="100%">
+                    <h6 class="dropdown-header" style="color: black">New Arrivals</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sales -->
+          <div class="tab-pane fade" id="sales" role="tabpanel">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Women's Sale</h6>
+                    <a href="#"><p>Just Added</p></a>
+                    <a href="#"><p>Dresses</p></a>
+                    <a href="#"><p>Jumpsuits and Rompers</p></a>
+                    <a href="#"><p>Shirts</p></a>
+                    <a href="#"><p>Sweaters</p></a>
+                    <a href="#"><p>Knits and Tees</p></a>
+                    <a href="#"><p>Coats and Jackets</p></a>
+                    <a href="#"><p>Pants and Shorts</p></a>
+                    <a href="#"><p>Skirts</p></a>
+                    <a href="#"><p>Swim</p></a>
+                    <a href="#"><p>Shoes</p></a>
+                    <a href="#"><p>Accessories</p></a>
+                    <a href="#"><p>All Sale</p></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dropdown_">
+                    <h6 class="dropdown-header">Men's Sale</h6>
+                    <a href="#"><p>Just Added</p></a>
+                    <a href="#"><p>Shirts</p></a>
+                    <a href="#"><p>Sweaters</p></a>
+                    <a href="#"><p>Outerwear</p></a>
+                    <a href="#"><p>Pants</p></a>
+                    <a href="#"><p>Tees</p></a>
+                    <a href="#"><p>Shorts and Swim</p></a>
+                    <a href="#"><p>Shoes and Accessories</p></a>
+                    <a href="#"><p>All Sale</p></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="dropdown_">
+                    <img src="../assets/sale-flyout.jpg" >
+                    <h6 class="dropdown-header" style="color: black">Sale</h6>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

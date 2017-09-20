@@ -1,0 +1,36 @@
+/* left nav */
+.left-nav {
+  margin: 20% 10%;
+}
+.left-nav > h6 {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.left-nav > p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.left-nav > a {
+  color: black;
+}
+.left-nav > a > p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+/* left nav toggle */
+.toggle-content {
+  margin-bottom: 20px;
+}
+.toggle-content > a {
+  color: black;
+  font-size: 13px;
+  margin: 0 20px;
+}
+/* a:focus */
+a:focus {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: underline;
+}

@@ -1,0 +1,76 @@
+<div style="margin-top: 162px;"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center bag-header">
+      <p>My Shopping Bag</p>
+      <hr style="background: black;" />
+      <span class="pull-left">Need Customer Assistance? Call 010-2895-xxxx or <a href="#">Email Us.</a></span><span class="pull-right">All transactions are safe and secure. <a href="#">Read More.</a></span>
+    </div>
+  </div>
+
+
+
+  <div class="table-header row" style="margin-top: 50px;">
+    <div class="col-md-2"><p>ITEM</p></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-1"><p>QTY</p></div>
+    <div class="col-md-2"><p>OPTIONS</p></div>
+    <div class="col-md-2"><p>AVAILABILITY</p></div>
+    <div class="col-md-1"><p>PRICE</p></div>
+    <div class="col-md-1"><p>TOTAL</p></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-12"><hr/></div>
+  </div>
+
+  <div class="table-content row" *ngFor="let item of cartItems">
+    <div class="col-md-2">
+      <img src="{{item.mainImage}}" width="50%">
+    </div>
+    <div class="col-md-2">
+      <p>{{item.name}}</p>
+      <p>Style : {{item.styleNum}}</p>
+      <p>Color: </p>
+      <p>Size: </p>
+    </div>
+    <div class="col-md-1">
+      <p>1</p>
+    </div>
+    <div class="col-md-2">
+      <a href="#"><p>Move to Wish List</p></a>
+    </div>
+    <div class="col-md-2">
+      <p>Ships in 1 - 2 business days.</p>
+    </div>
+    <div class="col-md-1">
+      <p>$ {{item.price}}</p>
+    </div>
+    <div class="col-md-1">
+      <p style="font-weight: 700;">$ {{item.price}}</p>
+    </div>
+    <div class="col-md-1">
+      <button style="background: transparent; border: none;"><i class="fa fa-times-thin" (click)="removeItemFromCart(item.id);"></i></button>
+    </div>
+    <div class="col-md-12">
+      <hr />
+    </div>
+  </div>
+
+  <div class="table-footer row">
+    <div class="col-md-7"></div>
+    <div class="col-md-5">
+      <h3>order summary</h3>
+      <p>Subtotal: <span class="pull-right">$ {{Total}}</span></p>
+      <hr />
+      <p>Estimated Shipping: <span class="pull-right">$ 8.00</span></p>
+      <span class="snippet">Based on ground shipping within the continental US</span>
+      <hr />
+      <p>Sales Tax: <span class="pull-right">$ 0.00</span></p>
+      <span class="snippet">Will be calculated based on your shipping address	</span>
+      <hr />
+      <p>Estimated Total: <span class="pull-right">$ {{Total+8.00}}</span></p>
+
+    </div>
+  </div>
+
+</div>
+

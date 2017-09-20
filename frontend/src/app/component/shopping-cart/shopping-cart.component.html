@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="cart-header col-md-12">
+      <h6>{{cartItems.length}} items in your shopping bag</h6>
+      <hr />
+
+      <div class="container-fluid">
+        <div class="row" *ngFor="let item of cartItems" style="padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+          <div class="col-md-4">
+            <img src="{{item.mainImage}}" width="100%" />
+          </div>
+          <div class="item-snippet col-md-7">
+            <h6>{{item.name}}</h6>
+            <p>Color: Oatmeal</p>
+            <p>Size: M</p>
+            <p>Qty: 1 @ ${{item.price}}</p>
+          </div>
+          <div class="col-md-1">
+            <button type="button" (click)="removeItemFromCart(item.id)" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cart-footer col-md-12">
+      <p class="pull-right">Sub Total:&nbsp;&nbsp;&nbsp;<span>${{ Total }}</span></p>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="cart-footer" style="background: dimgray;">
+        <a href="/cart"><p class="text-center">view your bag</p></a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="cart-footer" style="background: black;">
+        <a href="/cart"><p class="text-center">check out</p></a>
+      </div>
+    </div>
+  </div>
+</div>

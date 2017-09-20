@@ -1,0 +1,10 @@
+.image-text > a {
+  color: black;
+}
+.image-text > a > h6 {
+  font-variant: all-small-caps;
+  font-size: 15px;
+}
+.image-text > a > h6 > i {
+  margin-left: 10px;
+}

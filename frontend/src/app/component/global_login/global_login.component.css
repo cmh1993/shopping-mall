@@ -1,0 +1,16 @@
+p {
+  font-family: 'Lora', serif;
+  font-size: 11.5px;
+  font-style: italic;
+  margin: 0.5%;
+}
+h6 {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+._hr {
+  height: 50px;
+  width: 1px;
+  background: gray;
+}
