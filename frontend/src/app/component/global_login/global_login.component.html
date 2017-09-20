@@ -19,7 +19,40 @@
   </div>
   <div class="row">
     <div class="col-md-6 text-center" style="border-right: 1px solid black;">
-      <h6>Create a New Account</h6>
+      <h6 class="form-margin">Create a New Account</h6>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <form class="register-form" name="form" (ngSubmit)="register()" #registerForm="ngForm" [formGroup]="form">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input mdInput type="email" class="form-control input-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input mdInput type="password" class="form-control input-control" id="password"
+                       formControlName="password">
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control input-control" id="confirmPassword"
+                       formControlName="confirmPassword"
+                       [class.form-control-warning]="form.controls.confirmPassword.errors?.MatchPassword">
+
+              </div>
+              <div  *ngIf="form.controls.confirmPassword.errors?.MatchPassword">
+                <div class="alert alert-danger">Password not match</div>
+
+              </div>
+
+            </form>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+
+
     </div>
     <div class="col-md-6 text-center">
       <h6>Sign In</h6>

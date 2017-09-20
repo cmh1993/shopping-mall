@@ -20,10 +20,11 @@ import { ProductComponent } from './component/product/product.component';
 import { ItemService } from './service/item.service';
 import { SweatersService } from './service/men/sweaters.service';
 import { AuthService } from './service/auth.service';
+import { UserService } from './service/user.service';
 
 // Observable
 import 'rxjs/Rx';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 const appRoutes: Routes = [
@@ -73,10 +74,12 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
     JsonpModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
+    UserService,
     AuthService,
     ItemService,
     SweatersService,

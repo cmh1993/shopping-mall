@@ -4,6 +4,10 @@ p {
   font-style: italic;
   margin: 0.5%;
 }
+.form-group > label {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+}
 h6 {
   font-family: 'Lora', serif;
   font-size: 18px;
@@ -13,4 +17,17 @@ h6 {
   height: 50px;
   width: 1px;
   background: gray;
+}
+.form-margin {
+  margin-bottom: 5%;
+}
+.input-control {
+  border-radius: 0;
+  height: 30px;
+}
+.form-control-warning {
+  border: 1px solid #c82536;
+}
+.form-control-success {
+  border: 1px solid green;
 }

@@ -13,5 +13,4 @@ class UserViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         hashed_password = make_password(serializer.validated_data['password'])  # get the hashed password
         serializer.validated_data['password'] = hashed_password
-        # create user
-        user = super(UserViewSet, self).perform_create(serializer)
+        user = super(UserViewSet, self).perform_create(serializer)  # create user
