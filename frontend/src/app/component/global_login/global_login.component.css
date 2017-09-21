@@ -31,3 +31,13 @@ h6 {
 .form-control-success {
   border: 1px solid green;
 }
+/* Custom alert */
+.custom-alert-danger {
+  background: transparent;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  border: none;
+  padding: 0;
+
+
+}
