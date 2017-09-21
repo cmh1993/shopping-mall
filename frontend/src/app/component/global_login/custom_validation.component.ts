@@ -8,5 +8,8 @@ export class PasswordValidation {
     } else {
       return null
     }
+    if (password == null) { // no alert error if password is null
+      AC.get('confirmPassword').setErrors( {MatchPassword: false} )
+    }
   }
 }
