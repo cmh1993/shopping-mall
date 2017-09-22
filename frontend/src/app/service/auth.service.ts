@@ -16,7 +16,7 @@ export class AuthService {
   }
 
   login(log_email: string, log_password: string) {
-    return this.http.post('http://127.0.0.1:8000/api-token-auth/', { email: log_email, password: log_password })
+    return this.http.post('http://localhost:8000/api-token-auth/', { email: log_email, password: log_password })
       .map((response: Response) => {
         // login successful if there's a jwt token in the response
         let user = response.json();

@@ -35,9 +35,9 @@ export class GlobalLoginComponent{
       .subscribe(
         data => {
           // set success message and pass true paramater to persist the message after redirecting to the login page
-          alert('Registration successful')
+          alert('Registration successful. Please login')
           // this.alertService.success('Registration successful', true);
-          this.router.navigateByUrl('/login');
+          this.router.navigateByUrl('/home');
         },
         error => {
           alert('Username already exist');
