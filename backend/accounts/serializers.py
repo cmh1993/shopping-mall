@@ -4,7 +4,7 @@ from .models import User
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'email', 'password', 'is_superuser', 'first_name', 'last_name', 'address', 'contact_num', 'date_joined', 'is_active')
+        fields = ('id', 'email', 'password', 'first_name', 'last_name', 'zip_code', 'address', 'telephone', 'mobile', 'date_joined')
 
         # store hashing password
         def create(self, validated_data):
