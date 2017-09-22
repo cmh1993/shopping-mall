@@ -14,7 +14,7 @@ export class AuthService {
       return true;
     }
   }
-
+  // Login manager
   login(log_email: string, log_password: string) {
     return this.http.post('http://localhost:8000/api-token-auth/', { email: log_email, password: log_password })
       .map((response: Response) => {
@@ -27,7 +27,7 @@ export class AuthService {
         return user;
       });
   }
-
+  // Logout manager
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
