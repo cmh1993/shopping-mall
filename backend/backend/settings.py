@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Admin site
-    
     'rest_framework',
     'corsheaders',
     'mall',
