@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Admin site
     
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'mall',
     'accounts',
