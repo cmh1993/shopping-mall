@@ -4,6 +4,9 @@ export class User {
   password: string;
   first_name: string;
   last_name: string;
-  address: string;
+  city: string;
+  address1: string;
+  address2: string;
+  zip_code: string;
   contact_num: string;
 }

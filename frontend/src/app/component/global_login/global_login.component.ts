@@ -54,10 +54,9 @@ export class GlobalLoginComponent{
           location.reload();
         },
         error => {
-          alert('User does note exist!')
+          alert('User does not exist!')
         },
       );
   }
-
 
 }

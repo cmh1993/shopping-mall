@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Router} from "@angular/router";
 
 @Injectable()
 export class AuthService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   isLoggedIn() {
     if(localStorage.getItem('currentUser')) {
@@ -29,6 +30,7 @@ export class AuthService {
   }
   // Logout manager
   logout() {
+    this.router.navigateByUrl('/home')
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
   }

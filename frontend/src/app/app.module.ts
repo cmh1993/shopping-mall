@@ -14,6 +14,7 @@ import { CartComponent } from './component/cart/cart.component';
 import { GlobalLoginComponent } from './component/global_login/global_login.component';
 import { LoginComponent } from './component/login/login.component';
 import { AccountComponent } from './component/account/account.component';
+import { ProfileComponent } from './component/profile/profile.component';
 import { ProductComponent } from './component/product/product.component';
 
 // Service
@@ -34,6 +35,9 @@ const appRoutes: Routes = [
   },
   { path: 'global_login',
     component: GlobalLoginComponent,
+  },
+  { path: 'profile',
+    component: ProfileComponent,
   },
   { path: 'men',
     component: MenComponent,
@@ -61,6 +65,7 @@ const appRoutes: Routes = [
     LoginComponent,
     GlobalLoginComponent,
     AccountComponent,
+    ProfileComponent,
     ProductComponent,
     // Cart
     ShoppingCartComponent,

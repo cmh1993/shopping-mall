@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from '../../service/item';
 import { ItemService } from '../../service/item.service';
 
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',

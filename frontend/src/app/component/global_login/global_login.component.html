@@ -2,85 +2,97 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <p>Home / My Account</p>
-      <hr style="margin-top: 0;" color="black"/>
+      <div class="top-nav">
+        <p>Home / My Account</p>
+        <hr style="margin-top: 0;" color="black"/>
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 text-center" style="padding-top: 2%;">
-      <h6>New to ClubMonaco.com?</h6>
-      <p style="margin: 2% 0;">With a ClubMonaco.com account, you'll be able to...</p>
-      <!-- Tooltip line -->
-      <p>Check out faster // Create a customized Wish List // Save and review your order history</p>
-      <p>Receive email updates // Create an address book // Safely store your credit cards</p>
-      <p style="padding-bottom: 2%;">This page is not intended for Canadian residents. Please visit us at <a href="#">ClubMonaco.ca.</a></p>
-      <hr color="black" />
+      <div class="info-group">
+        <h6>New to ClubMonaco.com?</h6>
+        <p style="margin: 2% 0;">With a ClubMonaco.com account, you'll be able to...</p>
+        <!-- Tooltip line -->
+        <p>Check out faster // Create a customized Wish List // Save and review your order history</p>
+        <p>Receive email updates // Create an address book // Safely store your credit cards</p>
+        <p style="padding-bottom: 2%;">This page is not intended for Canadian residents. Please visit us at <a href="#">ClubMonaco.ca.</a></p>
+        <hr color="black" />
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 text-center" style="border-right: 1px solid black;">
-      <!-- Create account manager -->
-      <h6 class="form-margin">Create a New Account</h6>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <form class="register-form" name="form" (ngSubmit)="register()" #registerForm="ngForm" [formGroup]="form">
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control input-control" id="email"
-                       formControlName="email"
-                       [(ngModel)]="model.email">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control input-control" id="password"
-                       formControlName="password"
-                       [(ngModel)]="model.password">
-              </div>
-              <div class="form-group" style="margin-bottom: 5px;">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" class="form-control input-control" id="confirmPassword"
-                       formControlName="confirmPassword"
-                       [class.form-control-warning]="form.controls.confirmPassword.errors?.MatchPassword">
-              </div>
-              <div  *ngIf="form.controls.confirmPassword.errors?.MatchPassword">
-                <div class="alert alert-danger custom-alert-danger">Password not match</div>
-              </div>
-
-            </form>
+      <div class="manager-group">
+        <!-- Create account manager -->
+        <h6 class="form-margin">Create a New Account</h6>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <form class="register-form" name="form" (ngSubmit)="register()" #registerForm="ngForm" [formGroup]="form">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control input-control" id="email"
+                         formControlName="email"
+                         [(ngModel)]="model.email">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control input-control" id="password"
+                         formControlName="password"
+                         [(ngModel)]="model.password">
+                </div>
+                <div class="form-group" style="margin-bottom: 5px;">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input type="password" class="form-control input-control" id="confirmPassword"
+                         formControlName="confirmPassword"
+                         [class.form-control-warning]="form.controls.confirmPassword.errors?.MatchPassword">
+                </div>
+                <div  *ngIf="form.controls.confirmPassword.errors?.MatchPassword">
+                  <div class="alert alert-danger custom-alert-danger">Password not match</div>
+                </div>
+                <div class="form-group">
+                  <div class="createAccount" style="background: rgb(80, 80, 80)">
+                    <input class="text-center" type="submit" value="create account">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3"></div>
           </div>
-          <div class="col-md-3"></div>
         </div>
       </div>
 
-
     </div>
     <div class="col-md-6 text-center">
-      <h6>Sign In</h6>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <form class="login-form" name="form" (ngSubmit)="login()" #loginForm="ngForm">
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control input-control" id="log_email"
-                       [(ngModel)]="model.log_email" #email="ngModel" name="email">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control input-control" id="log_password"
-                       [(ngModel)]="model.log_password" #password="ngModel" name="password">
-              </div>
-              <div class="form-group">
-                <div class="createAccount" style="background: rgb(80, 80, 80)">
-                  <input class="text-center" type="submit" value="sign in">
+      <div class="manager-group">
+        <!-- Login manager -->
+        <h6>Sign In</h6>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <form class="login-form" name="form" (ngSubmit)="login()" #loginForm="ngForm">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control input-control" id="log_email"
+                         [(ngModel)]="model.log_email" #email="ngModel" name="email">
                 </div>
-              </div>
-            </form>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control input-control" id="log_password"
+                         [(ngModel)]="model.log_password" #password="ngModel" name="password">
+                </div>
+                <div class="form-group">
+                  <div class="createAccount" style="background: rgb(80, 80, 80)">
+                    <input class="text-center" type="submit" value="sign in">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3"></div>
           </div>
-          <div class="col-md-3"></div>
         </div>
       </div>
     </div>
@@ -92,10 +104,14 @@
   </div>
   <div class="row">
     <div class="col-md-6 text-center" style="border-right: 1px solid black;">
-      <h6>Track Your Order</h6>
+      <div class="manager-group">
+        <h6>Track Your Order</h6>
+      </div>
     </div>
     <div class="col-md-6 text-center">
-      <h6>Online Return</h6>
+      <div class="manager-group">
+        <h6>Online Return</h6>
+      </div>
     </div>
   </div>
 </div>
