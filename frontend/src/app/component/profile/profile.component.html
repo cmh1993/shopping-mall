@@ -1,0 +1,85 @@
+<div style="margin-top: 162px;"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="top-nav">
+        <p>Home / My Account / Preferences</p>
+        <hr style="margin-top: 0;" color="black"/>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center" style="padding-top: 2%;">
+      <div class="info-group">
+        <h6>CURRENT EMAIL ADDRESS:</h6>
+        <p>{{currentUser.user.email}}</p>
+      </div>
+      <div class="info-group">
+        <h6>CURRENT PASSWORD:</h6>
+        <p>**********</p>
+        <i class="fa fa-angle-double-right"></i><a href="#">Change Password</a>
+      </div>
+      <div class="info-group">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" checked="checked">
+          &nbsp;&nbsp; Yes, please send me information about new arrivals, special offers and exclusive events from Club Monaco.
+        </label>
+      </div>
+      <hr color="black" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+      <div class="modify-group">
+        <form class="modify-form" name="form" (ngSubmit)="modify()" #modifyForm="ngForm">
+          <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text text-center" class="form-control input-control" id="first_name"
+                   [(ngModel)]="model.first_name" name="firstName" placeholder="{{currentUser.user.first_name}}">
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control input-control" id="last_name"
+                   [(ngModel)]="model.last_name" name="lastName" placeholder="{{currentUser.user.last_name}}">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control input-control" id="city"
+                   [(ngModel)]="model.city" name="city" placeholder="{{currentUser.user.city}}">
+          </div>
+          <div class="form-group">
+            <label for="address1">Address1</label>
+            <input type="text" class="form-control input-control" id="address1"
+                   [(ngModel)]="model.address1" name="address1" placeholder="{{currentUser.user.address1}}">
+          </div>
+          <div class="form-group">
+            <label for="address2">Address2</label>
+            <input type="text" class="form-control input-control" id="address2"
+                   [(ngModel)]="model.address2" name="address2" placeholder="{{currentUser.user.address2}}">
+          </div>
+          <div class="form-group">
+            <label for="zip_code">Zip Code</label>
+            <input type="text" class="form-control input-control" id="zip_code"
+                   [(ngModel)]="model.zip_code" name="zipCode" placeholder="{{currentUser.user.zip_code}}">
+          </div>
+          <div class="form-group">
+            <label for="contact_num">Contact Number</label>
+            <input type="text" class="form-control input-control" id="contact_num"
+                   [(ngModel)]="model.contact_num" name="contactNumber" placeholder="{{currentUser.user.contact_num}}">
+          </div>
+          <div class="form-group">
+            <div class="modifyAccount">
+              <input class="text-center" type="submit" value="Modify">
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+
+
+</div>

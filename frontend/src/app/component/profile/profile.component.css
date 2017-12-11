@@ -1,0 +1,44 @@
+/* Top navi */
+.top-nav > p {
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin: 0.5%;
+}
+/* Info */
+.info-group {
+  margin-bottom: 2%;
+}
+.info-group > h6 {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 1%;
+}
+.info-group > p {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  margin: 0.5%;
+}
+.info-group > a {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0.5%;
+  text-decoration: underline;
+}
+.info-group > label {
+  font-size: 12px;
+  margin: 0.5%;
+}
+/* Form */
+.input-control {
+  border-radius: 0;
+  height: 25px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-group > label {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+}
