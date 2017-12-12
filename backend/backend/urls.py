@@ -29,7 +29,7 @@ from men.views import SweaterForMenViewSet
 from mall.category.category_viewsets import HighCategoryViewSet
 from mall.category.category_viewsets import LowCategoryViewSet
 # Goods
-from mall.views import GoodsViewSet
+from mall.goods.goods_viewsets import GoodsViewSet
 
 router = routers.DefaultRouter()
 router.register(r'accounts', UserViewSet)
