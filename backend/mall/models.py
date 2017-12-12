@@ -11,6 +11,6 @@ class Goods(models.Model):
     goods_detail = models.TextField()
     goods_color = models.ForeignKey(Color, related_name="Goods", on_delete=models.CASCADE)
     goods_size = models.ForeignKey(Size, related_name="Goods", on_delete=models.CASCADE)
-    goods_created = models.DateTimeField(auto_created=True)
+    goods_created = models.DateTimeField(auto_now_add=True)
 
 
