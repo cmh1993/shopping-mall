@@ -29,7 +29,7 @@ from PIL import Image
 if len(sys.argv) == 1:
     print("PIL File 0.4/2003-09-30 -- identify image files")
     print("Usage: pilfile [option] files...")
-    print("Options:")
+    print("options:")
     print("  -f  list supported file formats")
     print("  -i  show associated info and tile data")
     print("  -v  verify file headers")

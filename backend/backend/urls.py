@@ -25,11 +25,20 @@ from django.conf import settings
 from accounts.views import UserViewSet
 from men.views import SweaterForMenViewSet
 
+# Category
+from mall.category.category_viewsets import HighCategoryViewSet
+from mall.category.category_viewsets import LowCategoryViewSet
+# Goods
+from mall.views import GoodsViewSet
 
 router = routers.DefaultRouter()
 router.register(r'accounts', UserViewSet)
-router.register(r'men/sweaters', SweaterForMenViewSet)
 
+router.register(r'HighCategory', HighCategoryViewSet)
+router.register(r'LowCategory', LowCategoryViewSet)
+
+router.register(r'Goods', GoodsViewSet)
+router.register(r'men/sweaters', SweaterForMenViewSet)
 
 
 
@@ -38,5 +47,4 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     # Token authentication -> curl -X POST -d "login_id=....&password=...." http://127.0.0.1:8000/api-token-auth/
     url(r'^api-token-auth/', obtain_jwt_token),
-
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

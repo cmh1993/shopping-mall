@@ -35,7 +35,7 @@ def description(filepath, image):
 if len(sys.argv) == 1:
     print("PIL Print 0.3/2003-05-05 -- print image files")
     print("Usage: pilprint files...")
-    print("Options:")
+    print("options:")
     print("  -c            colour printer (default is monochrome)")
     print("  -d            debug (show available drivers)")
     print("  -p            print via lpr (default is stdout)")

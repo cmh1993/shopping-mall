@@ -26,7 +26,7 @@ def usage():
     print("PIL Convert 0.5/1998-12-30 -- convert image files")
     print("Usage: pilconvert [option] infile outfile")
     print()
-    print("Options:")
+    print("options:")
     print()
     print("  -c <format>  convert to format (default is given by extension)")
     print()
