@@ -1,16 +1,23 @@
 from rest_framework import serializers
-from .option_1_model import Option_1
-from .option_2_model import Option_2
+from .color_option_model import Color
+from .size_option_model import Size
+from .stock_option_model import Stock
+from mall.override.pkRelatedField import MyPrimaryKeyRelatedField
 
-
-class Option_1_Serializer(serializers.ModelSerializer):
-    Size = serializers.PrimaryKeyRelatedField(many=True, queryset=Option_2.objects.all(), required=False)
+class Color_Option_Serializer(serializers.ModelSerializer):
+    Size = MyPrimaryKeyRelatedField(many=True, queryset=Size.objects.all(), required=False)
     class Meta:
-        model = Option_1
+        model = Color
         fields = ('id', 'color_code', 'Size')
 
-class Option_2_Serializer(serializers.ModelSerializer):
+class Size_Option_Serializer(serializers.ModelSerializer):
     class Meta:
-        model = Option_2
-        fields = ('id', 'color_code', 'size_code', 'size_stock')
+        model = Size
+        fields = ('id', 'goods_code', 'color_code', 'size_code')
+
+class Stock_Option_Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = Stock
+        fields = ('id', 'goods_code', 'color_code', 'size_code', 'stock_num')
+
 

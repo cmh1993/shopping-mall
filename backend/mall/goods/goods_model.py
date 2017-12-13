@@ -10,10 +10,6 @@ class Goods(models.Model):
     goods_detail = models.TextField()
     goods_created = models.DateField(auto_now_add=True)
 
-
-    def __unicode__(self):
-        return self.goods_name
-
     def __str__(self):
         return self.goods_name
 

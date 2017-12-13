@@ -1,16 +1,19 @@
 from rest_framework import viewsets
 
-from .option_2_model import Option_2
-from .option_1_model import Option_1
-from .options_serializers import Option_1_Serializer, Option_2_Serializer
+from .size_option_model import Size
+from .color_option_model import Color
+from .stock_option_model import Stock
+from .options_serializers import Color_Option_Serializer, Size_Option_Serializer, Stock_Option_Serializer
 
 
-class Option_1_ViewSet(viewsets.ModelViewSet):
-    queryset = Option_1.objects.all()
-    serializer_class = Option_1_Serializer
+class Color_Option_ViewSet(viewsets.ModelViewSet):
+    queryset = Color.objects.all()
+    serializer_class = Color_Option_Serializer
 
-class Option_2_ViewSet(viewsets.ModelViewSet):
-    queryset = Option_2.objects.all()
-    serializer_class = Option_2_Serializer
+class Size_Option_ViewSet(viewsets.ModelViewSet):
+    queryset = Size.objects.all()
+    serializer_class = Size_Option_Serializer
 
-
+class Stock_Option_ViewSet(viewsets.ModelViewSet):
+    queryset = Stock.objects.all()
+    serializer_class = Stock_Option_Serializer
