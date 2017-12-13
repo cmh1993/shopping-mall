@@ -1,5 +1,4 @@
 from django.db import models
-from mall.options.option_model import Color, Size
 from mall.category.category_model import HighCategory, LowCategory
 
 class Goods(models.Model):
@@ -9,10 +8,7 @@ class Goods(models.Model):
     goods_name = models.CharField(max_length=100)
     goods_price = models.CharField(max_length=30)
     goods_detail = models.TextField()
-    goods_color = models.ForeignKey(Color, related_name="Goods", on_delete=models.CASCADE)
-    goods_size = models.ForeignKey(Size, related_name="Goods", on_delete=models.CASCADE)
     goods_created = models.DateField(auto_now_add=True)
-    goods_cnt = models.IntegerField(default=0)
 
 
     def __unicode__(self):

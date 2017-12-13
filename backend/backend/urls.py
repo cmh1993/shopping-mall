@@ -30,6 +30,8 @@ from mall.category.category_viewsets import HighCategoryViewSet
 from mall.category.category_viewsets import LowCategoryViewSet
 # Goods
 from mall.goods.goods_viewsets import GoodsViewSet
+# Options
+from mall.options.options_viewsets import Option_1_ViewSet, Option_2_ViewSet
 
 router = routers.DefaultRouter()
 router.register(r'accounts', UserViewSet)
@@ -38,6 +40,11 @@ router.register(r'HighCategory', HighCategoryViewSet)
 router.register(r'LowCategory', LowCategoryViewSet)
 
 router.register(r'Goods', GoodsViewSet)
+
+router.register(r'Color', Option_1_ViewSet)
+router.register(r'Size', Option_2_ViewSet)
+
+
 router.register(r'men/sweaters', SweaterForMenViewSet)
 
 
