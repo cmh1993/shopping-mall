@@ -10,5 +10,5 @@ class Stock(models.Model):
     stock_num = models.IntegerField(default=0)
 
     def __str__(self):
-        return '%s : %s : %s : %d' % (self.goods_code, self.color_code, self.size_code, self.stock_num)
+        return '%s : %d' % (self.size_code, self.stock_num)
 

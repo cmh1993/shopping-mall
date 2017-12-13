@@ -36,14 +36,14 @@ from mall.options.options_viewsets import Color_Option_ViewSet, Size_Option_View
 router = routers.DefaultRouter()
 router.register(r'accounts', UserViewSet)
 
-router.register(r'HighCategory', HighCategoryViewSet)
-router.register(r'LowCategory', LowCategoryViewSet)
+router.register(r'highCategory', HighCategoryViewSet)
+router.register(r'lowCategory', LowCategoryViewSet)
 
-router.register(r'Goods', GoodsViewSet)
+router.register(r'goods', GoodsViewSet)
 
-router.register(r'Color', Color_Option_ViewSet )
-router.register(r'Size', Size_Option_ViewSet)
-router.register(r'Stock', Stock_Option_ViewSet)
+router.register(r'color', Color_Option_ViewSet )
+router.register(r'size', Size_Option_ViewSet)
+router.register(r'stock', Stock_Option_ViewSet)
 
 router.register(r'men/sweaters', SweaterForMenViewSet)
 
