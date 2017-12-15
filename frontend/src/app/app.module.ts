@@ -22,11 +22,13 @@ import { ItemService } from './service/item.service';
 import { SweatersService } from './service/men/sweaters.service';
 import { AuthService } from './service/auth.service';
 import { UserService } from './service/user.service';
-
+import { CategoryService } from './service/category/category.service';
+import { GoodsService } from './service/men/goods.service';
 // Observable
 import 'rxjs/Rx';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+// Directive
+import { OnCreate } from './direcctive/oncreate';
 
 const appRoutes: Routes = [
   { path: '',
@@ -44,6 +46,10 @@ const appRoutes: Routes = [
   },
   { path: 'men/clothing/sweaters',
     component: SweatersComponent,
+  },
+  {
+    path: ':high_category/:low_category',
+    component: ProductComponent,
   },
   {
     path: 'cart',
@@ -74,6 +80,7 @@ const appRoutes: Routes = [
     MenComponent,
     SweatersComponent,
 
+    OnCreate,
   ],
   imports: [
     BrowserModule,
@@ -88,6 +95,9 @@ const appRoutes: Routes = [
     AuthService,
     ItemService,
     SweatersService,
+    CategoryService,
+    GoodsService,
+
   ],
   bootstrap: [AppComponent ]
 })

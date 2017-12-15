@@ -5,7 +5,6 @@ import {SweatersService} from "./men/sweaters.service";
 @Injectable()
 export class ItemService {
   selectedItems: Item[] = [];
-
   constructor(private sweatersService: SweatersService) {}
 
 

@@ -16,12 +16,17 @@ class GoodsSerializer(serializers.ModelSerializer):
         queryset=LowCategory.objects.all(),
         slug_field='group_name'
     )
+    # Options
     Color = MyPrimaryKeyRelatedField(many=True, queryset=Color.objects.all(), required=False)
     Size = MyPrimaryKeyRelatedField(many=True, queryset=Size.objects.all(), required=False)
     Stock = MyPrimaryKeyRelatedField(many=True, queryset=Stock.objects.all(), required=False)
+    # Goods_Image
+    goods_subImage = serializers.ImageField(required=False)
+    goods_subImage2 = serializers.ImageField(required=False)
     class Meta:
         model = Goods
         fields = ('high_category', 'low_category',
                   'style_num', 'goods_name', 'goods_price', 'goods_detail',
-                  'goods_created', 'Color', 'Size', 'Stock')
+                  'goods_created', 'goods_mainImage', 'goods_subImage', 'goods_subImage2',
+                  'Color', 'Size', 'Stock')
 

@@ -16,6 +16,9 @@ export class ProductComponent implements OnInit {
     this.route.paramMap
       .switchMap((params: ParamMap) => this.sweaterService.getById(+params.get('id')))
       .subscribe(product => this.product = product);
+
+    console.log(this.route.snapshot.paramMap.get('high_category'))
+    console.log(this.route.snapshot.paramMap.get('low_category'))
   }
 
 }

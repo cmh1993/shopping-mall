@@ -1,11 +1,8 @@
 from django.db import models
 
-
 """
-    
-    men : 10
-    women : 11
-
+ men : 10
+ women : 11
 """
 class HighCategory(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -14,6 +11,13 @@ class HighCategory(models.Model):
     def __str__(self):
         return self.gender
 
+"""
+ men_Sweater : 100
+ men_Outwear : 101
+ 
+ women_Sweater : 110
+ women_Outwear : 111
+"""
 class LowCategory(models.Model):
     id = models.IntegerField(primary_key=True)
     group_name = models.CharField(max_length=50, unique=True)

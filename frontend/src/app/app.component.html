@@ -209,6 +209,17 @@
                 <div class="col-md-3">
                   <div class="dropdown_">
                     <h6 class="dropdown-header">Clothing</h6>
+
+                    <!-- Adding item in categoryObj list -->
+                    <div *ngFor="let item of this.menCategory.LowCategory;">
+                      <div *ngIf="item" (onCreate)="this.getCategoryName(item)">
+                      </div>
+                    </div>
+                    <div class="category" *ngFor="let item of this.categoryObj">
+                      <a href="/{{item.high_category}}/{{item.group_name}}"><p>{{item.group_name}}</p></a>
+                    </div>
+
+
                     <a href="#"><p>Casual Shirts</p></a>
                     <a href="#"><p>Outerwear</p></a>
                     <a href="/men/clothing/sweaters"><p>Sweaters</p></a>

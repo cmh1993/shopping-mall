@@ -3,18 +3,13 @@ from .category_model import HighCategory, LowCategory
 from mall.override.slug import SlugRelatedModuleField
 from mall.goods.goods_model import Goods
 
+
+
 class HighCategorySerializer(serializers.ModelSerializer):
+    LowCategory = serializers.PrimaryKeyRelatedField(many=True, queryset=LowCategory.objects.all(), required=False)
     class Meta:
         model = HighCategory
-        fields = ('id', 'gender')
-
-"""
-
-    Product Code...
-    Outwear - 100
-    Sweaters - 101
-
-"""
+        fields = ('id', 'gender', 'LowCategory')
 
 class LowCategorySerializer(serializers.ModelSerializer):
     high_category = SlugRelatedModuleField(
@@ -25,4 +20,4 @@ class LowCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = LowCategory
-        fields = ('id', 'high_category', 'group_name', 'code', 'Goods')
+        fields = ('id', 'high_category', 'group_name', 'Goods')
