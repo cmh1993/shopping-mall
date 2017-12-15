@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../../../service/item.service';
 import { Item } from '../../../../service/item';
 import { SweatersService } from "../../../../service/men/sweaters.service";
-import { GoodsService } from "../../../../service/men/goods.service";
+import { GoodsService } from "../../../../service/goods/goods.service";
 
 @Component({
   templateUrl: './sweaters.component.html',

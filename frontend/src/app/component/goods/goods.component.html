@@ -1,0 +1,26 @@
+<div style="margin-top: 162px;"></div>
+
+
+<div class="container" style="width: 60%;">
+
+  <div class="row">
+    <div class="col-md-7">
+
+
+
+
+    </div>
+    <div class="col-md-5" style="background-color: yellow;">
+      b
+
+      <div *ngFor="let item of this.goodsList.Goods">
+        <p>{{item}}</p>
+        <div *ngIf="item" (onCreate)="getGoodsObj(item)"></div>
+      </div>
+      <div *ngFor="let item of this.goodsObj">
+        {{item.goods_name}}
+      </div>
+
+    </div>
+  </div>
+</div>

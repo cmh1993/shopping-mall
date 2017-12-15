@@ -15,7 +15,7 @@ import { GlobalLoginComponent } from './component/global_login/global_login.comp
 import { LoginComponent } from './component/login/login.component';
 import { AccountComponent } from './component/account/account.component';
 import { ProfileComponent } from './component/profile/profile.component';
-import { ProductComponent } from './component/product/product.component';
+import { GoodsComponent } from './component/goods/goods.component';
 
 // Service
 import { ItemService } from './service/item.service';
@@ -23,7 +23,7 @@ import { SweatersService } from './service/men/sweaters.service';
 import { AuthService } from './service/auth.service';
 import { UserService } from './service/user.service';
 import { CategoryService } from './service/category/category.service';
-import { GoodsService } from './service/men/goods.service';
+import { GoodsService } from './service/goods/goods.service';
 // Observable
 import 'rxjs/Rx';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -49,14 +49,14 @@ const appRoutes: Routes = [
   },
   {
     path: ':high_category/:low_category',
-    component: ProductComponent,
+    component: GoodsComponent,
   },
   {
     path: 'cart',
     component: CartComponent,
   },
-  { path: 'product/:id',
-    component: ProductComponent
+  { path: 'goods/:id',
+    component: GoodsComponent
   },
 
   { path: '**',
@@ -72,7 +72,7 @@ const appRoutes: Routes = [
     GlobalLoginComponent,
     AccountComponent,
     ProfileComponent,
-    ProductComponent,
+    GoodsComponent,
     // Cart
     ShoppingCartComponent,
     CartComponent,

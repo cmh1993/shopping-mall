@@ -14,4 +14,13 @@ export class GoodsService {
   }
 
 
+  //
+  getAllGoodsList(category: any) {
+    return this.http.get('http://localhost:8000/lowCategory/' + category + '/').map((response: Response) => response.json());
+  }
+  getGoodsById(id: number) {
+    return this.http.get('http://localhost:8000/goods/' + id + '/').map((response: Response) => response.json());
+  }
+
+
 }

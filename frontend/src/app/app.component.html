@@ -212,7 +212,7 @@
 
                     <!-- Adding item in categoryObj list -->
                     <div *ngFor="let item of this.menCategory.LowCategory;">
-                      <div *ngIf="item" (onCreate)="this.getCategoryName(item)">
+                      <div *ngIf="item" (onCreate)="this.getCategoryObj(item)">
                       </div>
                     </div>
                     <div class="category" *ngFor="let item of this.categoryObj">

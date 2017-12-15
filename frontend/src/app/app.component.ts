@@ -33,7 +33,7 @@ export class AppComponent implements OnInit{
   private getMenCategory() {
     this.categoryService.getAllMenCategory().subscribe(category => { this.menCategory = category; });
   }
-  protected getCategoryName(id: number) {
+  protected getCategoryObj(id: number) {
     this.categoryService.getCategoryById(id).subscribe(categoryObj => {this.categoryObj.push(categoryObj); });
   }
 

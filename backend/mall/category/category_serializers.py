@@ -20,4 +20,4 @@ class LowCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = LowCategory
-        fields = ('id', 'high_category', 'group_name', 'Goods')
+        fields = ('group_name', 'high_category', 'Goods')
