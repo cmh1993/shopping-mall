@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Item } from './item';
-import {SweatersService} from "./men/sweaters.service";
 
 @Injectable()
 export class ItemService {
-  selectedItems: Item[] = [];
-  constructor(private sweatersService: SweatersService) {}
+  selectedItems: any[] = [];
+  constructor() {}
 
 
   getItemsList() {
@@ -20,7 +18,7 @@ export class ItemService {
   }
 
   // Get items in cart
-  getSelectedItems(): Item[] {
+  getSelectedItems(): any[] {
     return JSON.parse(localStorage["selectedItems"]);
   }
 
@@ -36,7 +34,7 @@ export class ItemService {
   // Remove item in cart
   removeItem(id:number): void {
     this.getItemsList();
-    let item = this.selectedItems.find(ob => ob.id === id);
+    let item = this.selectedItems.find(ob => ob.style_num === id);
     let itemIndex = this.selectedItems.indexOf(item);
     this.selectedItems.splice(itemIndex, 1);
     localStorage.setItem("selectedItems", JSON.stringify(this.selectedItems))

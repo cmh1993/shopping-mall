@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../../service/item';
 import { ItemService } from '../../service/item.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { ItemService } from '../../service/item.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartItems: Item[] = [];
+  cartItems: any[] = [];
   Total: number = 0;
 
   constructor(private itemService: ItemService) { }
@@ -26,7 +25,7 @@ export class CartComponent implements OnInit {
   }
   SubTotal() {
     for(var i=0; i<this.cartItems.length ; i++ ) {
-      this.Total += Number(this.cartItems[i].price);
+      this.Total += Number(this.cartItems[i].goods_price);
     }
   }
 

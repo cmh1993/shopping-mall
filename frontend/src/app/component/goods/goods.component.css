@@ -1,0 +1,30 @@
+.top-content {
+  margin: 10px 0;
+}
+.top-content > a {
+  color: dimgrey;
+  font-variant: all-small-caps;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.top-content > span {
+  color: dimgrey;
+  font-size: 12px;
+}
+.item-card > h6 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-variant: all-small-caps;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.item-card > p {
+  font-size: 11px;
+  color: rgb(128, 128, 128)
+
+
+
+;
+
+}

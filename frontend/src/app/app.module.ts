@@ -4,10 +4,8 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-
 // Component
 import { HomeComponent } from './component/home/home.component';
-import { SweatersComponent } from './component/men/clothing/sweaters/sweaters.component';
 import { MenComponent } from './component/men/men.component';
 import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.component';
 import { CartComponent } from './component/cart/cart.component';
@@ -16,10 +14,10 @@ import { LoginComponent } from './component/login/login.component';
 import { AccountComponent } from './component/account/account.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { GoodsComponent } from './component/goods/goods.component';
+import { GoodsDetailComponent } from './component/goods_detail/goods_detail.component';
 
 // Service
 import { ItemService } from './service/item.service';
-import { SweatersService } from './service/men/sweaters.service';
 import { AuthService } from './service/auth.service';
 import { UserService } from './service/user.service';
 import { CategoryService } from './service/category/category.service';
@@ -41,22 +39,21 @@ const appRoutes: Routes = [
   { path: 'profile',
     component: ProfileComponent,
   },
-  { path: 'men',
-    component: MenComponent,
-  },
-  { path: 'men/clothing/sweaters',
-    component: SweatersComponent,
+  {
+    path: 'cart',
+    component: CartComponent,
   },
   {
     path: ':high_category/:low_category',
     component: GoodsComponent,
   },
   {
-    path: 'cart',
-    component: CartComponent,
+    path: ':high_category/:low_category/:styleNum',
+    component: GoodsDetailComponent,
+
   },
-  { path: 'goods/:id',
-    component: GoodsComponent
+  { path: 'men',
+    component: MenComponent,
   },
 
   { path: '**',
@@ -72,13 +69,14 @@ const appRoutes: Routes = [
     GlobalLoginComponent,
     AccountComponent,
     ProfileComponent,
+    //Goods
     GoodsComponent,
+    GoodsDetailComponent,
     // Cart
     ShoppingCartComponent,
     CartComponent,
     // Men's clothing component
     MenComponent,
-    SweatersComponent,
 
     OnCreate,
   ],
@@ -94,7 +92,6 @@ const appRoutes: Routes = [
     UserService,
     AuthService,
     ItemService,
-    SweatersService,
     CategoryService,
     GoodsService,
 

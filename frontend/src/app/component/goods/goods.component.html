@@ -1,26 +1,50 @@
 <div style="margin-top: 162px;"></div>
-
+<!-- Banner Information -->
+<div class="container-fluid">
+  <div class="row" style="background: #e8eff9;">
+    <div class="col-md-12 text-center">
+      <img src="../../../../../assets/1121923.png" />
+    </div>
+  </div>
+</div>
 
 <div class="container" style="width: 60%;">
-
   <div class="row">
-    <div class="col-md-7">
-
-
-
-
-    </div>
-    <div class="col-md-5" style="background-color: yellow;">
-      b
-
-      <div *ngFor="let item of this.goodsList.Goods">
-        <p>{{item}}</p>
-        <div *ngIf="item" (onCreate)="getGoodsObj(item)"></div>
+    <div class="col-md-12">
+      <div class="top-content pull-left">
+        <a href="/home">home</a>
+        <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+        <a href="/men">{{this.high_category}}</a>
+        <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+        <a>{{this.low_category}}</a>
       </div>
-      <div *ngFor="let item of this.goodsObj">
-        {{item.goods_name}}
+      <div class="top-content pull-right">
+        <a href="#">1</a>
+        <!--<a href="#">2</a>-->
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a href="#">next</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div *ngFor="let item of this.goodsList.Goods">
+          <div *ngIf="item" (onCreate)="getGoodsObj(item)"></div>
+        </div>
+        <div class="item-card col-md-3" *ngFor="let item of this.goodsObj">
+          <img src="{{item.goods_mainImage}}" width="100%" [routerLink]="['/'+ this.high_category + '/' + this.low_category + '/', item.style_num]">
+          <h6 class="text-center">{{item.goods_name}}</h6>
+          <p class="text-center">$ {{item.goods_price}}</p>
+          <button type="button" (click)="addItemInCart(item)">Add to Cart</button>
+        </div>
+
       </div>
 
     </div>
   </div>
 </div>
+
+
+
