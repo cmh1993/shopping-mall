@@ -1,18 +1,22 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { GoodsService } from '../../service/goods/goods.service';
 
 @Component({
   templateUrl: './goods_detail.component.html',
   styleUrls: ['./goods_detail.component.css']
 })
 export class GoodsDetailComponent implements OnInit{
-  constructor(private route: ActivatedRoute) {
+  goods: any[] = [];
 
+  constructor(private route: ActivatedRoute, private goodsService: GoodsService) {
   }
   ngOnInit() {
-    console.log(this.route.snapshot.paramMap.get('low_category'));
-    console.log(this.route.snapshot.paramMap.get('high_category'));
-    console.log(this.route.snapshot.paramMap.get('styleNum'));
-
+    this.getGoodsObj(this.route.snapshot.paramMap.get('styleNum'));
   }
+
+  protected getGoodsObj(id: any) {
+    this.goodsService.getGoodsById(id).subscribe(goodsObj => { this.goods = goodsObj; });
+  }
+  
 }
