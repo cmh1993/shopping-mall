@@ -19,8 +19,7 @@ class HighCategory(models.Model):
  women_Outwear : 111
 """
 class LowCategory(models.Model):
-    # id = models.IntegerField(primary_key=True)
-    group_name = models.CharField(primary_key=True, max_length=50, unique=True)
+    group_name = models.CharField(primary_key=True , max_length=50, unique=True)
     high_category = models.ForeignKey(HighCategory, related_name="LowCategory", on_delete=models.CASCADE)
 
     def __str__(self):

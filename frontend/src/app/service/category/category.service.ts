@@ -9,7 +9,6 @@ export class CategoryService {
   getAllMenCategory() {
     return this.http.get('http://localhost:8000/highCategory/10/').map((response: Response) => response.json());
   }
-  // http GET http://localhost/accounts:8000/<id>/
   getCategoryById(id: number) {
     return this.http.get('http://localhost:8000/lowCategory/' + id + '/').map((response: Response) => response.json());
   }

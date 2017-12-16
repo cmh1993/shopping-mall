@@ -50,6 +50,16 @@
 .dropdown_ > img {
   margin-bottom: 10px;
 }
+/* Category */
+.category > a {
+  font-size: 13px;
+  color: black;
+}
+.category > a > p {
+  margin-bottom: 5px;
+  color: dimgrey;
+}
+.
 /* Hr */
 hr {
   height: 50px;

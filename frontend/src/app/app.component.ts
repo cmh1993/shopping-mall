@@ -17,6 +17,8 @@ export class AppComponent implements OnInit{
   menCategory: any[] = [];
   categoryObj: any[] = []
 
+  item: any[] =[];
+
   constructor( private router: Router, private itemService: ItemService, private authService: AuthService,
   private categoryService: CategoryService,
   ) {}
