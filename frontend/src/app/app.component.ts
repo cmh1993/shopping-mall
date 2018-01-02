@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {ItemService} from "./service/item.service";
-import { Item } from './service/item';
 import { AuthService } from './service/auth.service';
 import { CategoryService } from './service/category/category.service';
 
@@ -12,7 +11,7 @@ import { CategoryService } from './service/category/category.service';
 })
 export class AppComponent implements OnInit{
   title = 'app';
-  cartItems: Item[] = [];
+  cartItems: any[] = [];
 
   menCategory: any[] = [];
   categoryObj: any[] = []
@@ -24,13 +23,13 @@ export class AppComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    this.getItemsForCart();
+    // this.getItemsForCart();
     this.getMenCategory();
   }
-
-  getItemsForCart(): void {
-    this.cartItems = this.itemService.getSelectedItems();
-  }
+  //
+  // getItemsForCart(): void {
+  //   this.cartItems = this.itemService.getSelectedItems();
+  // }
 
   private getMenCategory() {
     this.categoryService.getAllMenCategory().subscribe(category => { this.menCategory = category; });
@@ -38,6 +37,7 @@ export class AppComponent implements OnInit{
   protected getCategoryObj(id: number) {
     this.categoryService.getCategoryById(id).subscribe(categoryObj => {this.categoryObj.push(categoryObj); });
   }
+
 
 
 
